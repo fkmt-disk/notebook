@@ -1,14 +1,15 @@
 package notebook.core.parser
 
+import notebook.core.parser.impl._
 import notebook.implicits.util._
 
 private[core] object Extension {
   
-  case object Textile extends Extension(".tt", Parser.Textile)
+  case object Textile extends Extension(".tt", TextileParser)
   
-  case object MediaWiki extends Extension(".wiki", Parser.MediaWiki)
+  case object MediaWiki extends Extension(".wiki", MediaWikiParser)
   
-  case object Scaml extends Extension(".scaml", Parser.Scaml)
+  case object Scaml extends Extension(".scaml", ScamlParser)
   
   val values = Array(Textile, MediaWiki, Scaml)
   
