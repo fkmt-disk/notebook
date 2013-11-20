@@ -9,11 +9,11 @@ package object control {
     def close(): Unit
   }
   
-  implicit class ClosableResource[A <: Closable](resource: A) {
-    def using[B](block: (A) => B): Either[Throwable, B] = allCatch andFinally {
-      resource.close
+  implicit class ClosableWrapper[A <: Closable](closable: A) {
+    def using[B](block: (A) => B): Either[Throwable, B] = catching(classOf[Exception]) andFinally {
+      closable.close
     } either {
-      block(resource)
+      block(closable)
     }
   }
   

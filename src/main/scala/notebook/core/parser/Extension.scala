@@ -13,12 +13,7 @@ private[core] object Extension {
   
   val values = Array(Textile, MediaWiki, Scaml)
   
-  def lookup(text: String): Option[Extension] = text match {
-    case x if x.endsWith(Textile.ext)   => Textile
-    case x if x.endsWith(MediaWiki.ext) => MediaWiki
-    case x if x.endsWith(Scaml.ext)     => Scaml
-    case _                              => None
-  }
+  def lookup(text: String): Option[Extension] = values.find(x => text.endsWith(x.ext))
   
 }
 

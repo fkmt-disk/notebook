@@ -25,7 +25,7 @@ package object io {
   
   implicit class OutputStreamWrapper(os: OutputStream) {
     
-    def <(is: InputStream): Either[Throwable, _] = allCatch andFinally {
+    def <(is: InputStream): Either[Throwable, _] = catching(classOf[Exception]) andFinally {
       IOUtils.closeQuietly(os)
       IOUtils.closeQuietly(is)
     } either {
