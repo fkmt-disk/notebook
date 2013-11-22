@@ -7,7 +7,7 @@ import org.scalatest.EitherValues._
 import org.apache.commons.io.FileUtils
 import notebook.implicits.io._
 
-class iospec extends FlatSpec with ShouldMatchers {
+class ioSpec extends FlatSpec with ShouldMatchers {
   
   notebook.ready4test
   import notebook.TestHelper._

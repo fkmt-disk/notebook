@@ -4,7 +4,7 @@ import org.scalatest.FlatSpec
 import org.scalatest.matchers.ShouldMatchers
 import notebook.implicits.util._
 
-class utilspec extends FlatSpec with ShouldMatchers {
+class utilSpec extends FlatSpec with ShouldMatchers {
   
   notebook.ready4test
   

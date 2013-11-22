@@ -8,7 +8,7 @@ import com.typesafe.config.ConfigFactory
 import com.typesafe.config.ConfigException.{WrongType, Missing}
 import notebook.implicits.config._
 
-class configspec extends FlatSpec with ShouldMatchers {
+class configSpec extends FlatSpec with ShouldMatchers {
   
   notebook.ready4test
   

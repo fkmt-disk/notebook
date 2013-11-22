@@ -9,7 +9,7 @@ import org.scalatest.matchers.ShouldMatchers
 import org.scalatest.EitherValues._
 import notebook.implicits.control._
 
-class controlspec extends FlatSpec with ShouldMatchers {
+class controlSpec extends FlatSpec with ShouldMatchers {
   
   notebook.ready4test
   import notebook.TestHelper._
