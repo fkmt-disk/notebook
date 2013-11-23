@@ -10,7 +10,7 @@ private[core] object ContentType {
   case object Gif extends ContentType(".gif", "image/gif")
   case object Other extends ContentType("", "application/octet-stream")
   
-  val values = Array(Css, JavaScript, Html, Jpeg, Png, Gif, Other)
+  val values = Seq(Css, JavaScript, Html, Jpeg, Png, Gif, Other)
   
   def find(text: String): ContentType = values.find(x => text.endsWith(x.ext)).get
   
