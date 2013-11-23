@@ -11,7 +11,7 @@ private[core] object Extension {
   
   case object Scaml extends Extension(".scaml", ScamlParser)
   
-  val values = Array(Textile, MediaWiki, Scaml)
+  val values = Seq(Textile, MediaWiki, Scaml)
   
   def lookup(text: String): Option[Extension] = values.find(x => text.endsWith(x.ext))
   
