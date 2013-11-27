@@ -20,6 +20,14 @@ iii
 ooo
 
 
+/scaml/>>>
+%div.alert.alert-danger
+	:plain
+		あああ
+		いいい
+<<<
+
+
 * An item in a bulleted (unordered) list
 * Another item in a bulleted list
 ** Second Level

@@ -4,7 +4,7 @@ import java.io.File
 import org.fusesource.scalate.TemplateEngine
 import notebook.core.parser.Parser
 
-private[core] object ScamlParser extends Parser {
+private[core] object JadeParser extends Parser {
   
   private[this] val engine = {
     val engine = new TemplateEngine
@@ -14,6 +14,6 @@ private[core] object ScamlParser extends Parser {
     engine
   }
   
-  override def parseImpl(text: String) = engine.layout(engine.compileScaml(text).source)
+  override def parseImpl(text: String) = engine.layout(engine.compileText("jade", text).source)
   
 }
