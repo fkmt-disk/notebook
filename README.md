@@ -29,13 +29,42 @@ $ sbt run
 
 * .wiki  
 	=> MediaWiki
-* .tt  
+* .textile  
 	=> Textile
 * .scaml  
 	=> Scaml
+* .jade
+	=> Jade
 
 それぞれ上記拡張子のファイルにアクセスすると、その中身をパース。  
 `./www/assets/template.html`の中の「`{content}`」の部分に埋め込んでレスポンスを返す。
+
+
+#### 別テンプレート埋め込み
+
+<pre>
+/{テンプレート種別}/>>>
+
+...いろいろ
+
+<<<
+</pre>
+という形式で、別テンプレートを埋め込むことができる。
+
+例えば、textileにscamlを埋め込むには、`sample.textile`の中に
+<pre>
+
+(textileの記法でいろいろ...)
+
+/scaml/>>>
+%div.alert.alert-danger
+	メッセージ
+<<<
+
+(textileの記法でいろいろ...)
+
+</pre>
+のように一部だけ別テンプレートの記法を使える。
 
 
 #### 設定とか
