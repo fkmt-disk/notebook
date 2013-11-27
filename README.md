@@ -33,7 +33,7 @@ $ sbt run
 	=> Textile
 * .scaml  
 	=> Scaml
-* .jade
+* .jade  
 	=> Jade
 
 それぞれ上記拡張子のファイルにアクセスすると、その中身をパース。  
@@ -43,11 +43,11 @@ $ sbt run
 #### 別テンプレート埋め込み
 
 <pre>
-/{テンプレート種別}/>>>
+/{テンプレート種別}/&gt;&gt;&gt;
 
 ...いろいろ
 
-<<<
+&lt;&lt;&lt;
 </pre>
 という形式で、別テンプレートを埋め込むことができる。
 
@@ -56,10 +56,10 @@ $ sbt run
 
 (textileの記法でいろいろ...)
 
-/scaml/>>>
+/scaml/&gt;&gt;&gt;
 %div.alert.alert-danger
 	メッセージ
-<<<
+&lt;&lt;&lt;
 
 (textileの記法でいろいろ...)
 
